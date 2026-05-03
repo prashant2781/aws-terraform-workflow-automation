@@ -40,3 +40,10 @@ jobs:
       - name: Terraform Plan
         working-directory: infra
         run: terraform plan
+
+
+- name: Terraform Apply (Manual Approval)
+        working-directory: infra
+        run: terraform apply -auto-approve
+        environment: prod
+
