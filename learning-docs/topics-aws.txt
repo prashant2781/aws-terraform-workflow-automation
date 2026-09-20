@@ -1,0 +1,29 @@
+1) AWS Organization,SCP,Landing Zone, Control Tower
+2) CloudFront
+3) GuardDuty/WSF/Shield
+4) Global Accelerator/Route53
+5) Cloudwatch/Cloudtrail
+6) DR
+7) Cost optimize
+8) Security
+9) Application Integration
+10) Microservices
+11) Lambda
+12) Redis/ElastiCache
+13) VPC Peering/Transit gateway/Direct Connect
+14) Auto-scaling
+15) Canary/Blue Green
+16) SecurityHub
+17) Inspector
+18) AWS Config
+19) IAM Access Analyzer
+20) Elastic Beanstalk
+21) EKS/Kubernetes
+22) AWS Trusted Advisor 
+23) RestAPI/Http
+24) ALB/NLB/GLB
+25) API Gateway
+26) S3
+27) Database
+28) Synchronous & asynchronous
+29) Statefull & Stateless

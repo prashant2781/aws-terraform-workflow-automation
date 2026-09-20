@@ -1,0 +1,101 @@
+DynamoDB
+RDS
+IAM
+CostOptimize
+Security
+Autoscaling
+Lambda
+End to end flow achitect
+DR/RTO/RPO
+VPC/Peering/Direct gateway
+VPC architect
+High Availability
+Kubernetes
+ECS
+CI/CD
+Terraform
+Monitoring/Cloudwatch/Cloudrail/GuardDuty
+Iaas Paas Saas
+Challenges
+Eventbus
+hub and spoke
+Secret manager
+API gateway
+EventBridge
+Stepfunction
+SQS
+SNS
+
+EC2 and Lambda difference
+Iaas Paas Saas
+Disater Recovery
+Challenges face
+Autoscaling
+IAM
+Terraform
+Lambda
+Cloudformation
+Why ECS over EKS
+Eventbus
+hub and spoke
+Secret key manager
+cold
+how lambda trigger if S3 upload
+provision in dynamodb
+how can use third party api in lambda
+Docker scanning
+Code scanning
+how can sync RDS data in two region
+Autoscaling in Lambda
+Elastic Beanstalk vs ECS/EKS
+Threshold
+Lambda ko VPC mai rakh sakte hain ya nhi, agar rakhte hain toh kya hoga aur agar nhi rakte toh kya hoga
+Assume role kya hota hai
+policy kaise kyon likhte hain
+terraform mai code kaise likhte hain
+Stepfuntion two types
+how many SQS
+how can stop Lambda to idle
+Read and write
+Auto scaling kaise hoti hain
+Build/test/security scan
+Agar dynamoDB table mai data change hota hai toh kaise lambda trigger hoga
+DynamoDB mai index ka use
+
+CI/CD pipeline me Lambda deploy kaise hoti hai?
+Developer code Git me push karta hai → pipeline trigger hoti hai → code test/build hota hai → Lambda ZIP/package banta hai → Terraform/SAM/Serverless/CLI se AWS Lambda update hoti hai → optional testing + approval + prod deployment hota hai.
+Lambda ek AWS service hai jisme function run hota hai.
+Lekin function ke andar jo Python/Node.js code, dependencies, handler, env variables, IAM role, timeout, memory etc. hota hai — usko update karna hi deployment hai.
+
+2. CI/CD pipeline ka high-level flow
+Developer
+   |
+   v
+AWS Lambda Updated
+   |
+   v
+Post-deployment test / API Gateway validation
+   | git push
+   v
+GitHub / CodeCommit / Azure DevOps
+   |
+   v
+CI Pipeline
+   |
+   | 1. Checkout code
+   | 2. Install dependencies
+   | 3. Run tests / lint / security scan
+   | 4. Create lambda ZIP
+   | 5. Terraform plan
+
+Simple real production example:
+1. Developer code commit karta hai
+2. Pull request create hoti hai
+3. Code review approve hota hai
+4. Merge to dev branch
+5. Dev pipeline trigger hoti hai
+6. Terraform Lambda ZIP banata hai
+7. AWS Lambda update hoti hai
+8. API Gateway se test hota hai
+9. Same build stage/prod me promote hota hai
+
