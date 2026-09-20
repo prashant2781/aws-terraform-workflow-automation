@@ -1,0 +1,32 @@
+VPC
+EC2
+Lambda
+Billing
+Secrets Manager
+API Gateway
+ECS
+Bedrock
+DynamoDB
+Cloudwatch
+IAM
+Cognito
+Elastic Beanstalk
+Kubernetes
+AWS Elastic Disaster Recovery
+Aurora and RDS
+ElastiCache
+CloudFront
+Route53
+AWS Auto Scaling
+CloudFormation
+Step Functions
+Amazon EventBridge
+Simple Notification Service
+Simple Queue Service
+S3
+Terraform
+CI/CD pipeline
+Github
+Docker
+
+
